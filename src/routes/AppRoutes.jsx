@@ -18,6 +18,9 @@ import OnboardingProgress from '../pages/applicant/OnboardingProgress'
 import OffboardingAdmin from '../pages/offboarding/OffboardingAdmin'
 import OffboardingEmployee from '../pages/offboarding/OffboardingEmployee'
 import Profile from '../pages/Profile'
+import Settings from '../pages/Settings'
+import Attendance from '../pages/employee/Attendance'
+import Payroll from '../pages/employee/Payroll'
 
 const ProtectedRoute = ({ children, allowedRoles = [] }) => {
   const { isAuthenticated, user } = useAuth()
@@ -115,6 +118,22 @@ const AppRoutes = () => {
         }
       />
       <Route
+        path="/employee/attendance"
+        element={
+          <ProtectedRoute allowedRoles={[ROLES.EMPLOYEE]}>
+            <Attendance />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/employee/payroll"
+        element={
+          <ProtectedRoute allowedRoles={[ROLES.EMPLOYEE]}>
+            <Payroll />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/employee/offboarding"
         element={
           <ProtectedRoute allowedRoles={[ROLES.EMPLOYEE]}>
@@ -199,6 +218,16 @@ const AppRoutes = () => {
         element={
           <ProtectedRoute>
             <Profile />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Settings Route - Available to all authenticated users */}
+      <Route
+        path="/settings"
+        element={
+          <ProtectedRoute>
+            <Settings />
           </ProtectedRoute>
         }
       />

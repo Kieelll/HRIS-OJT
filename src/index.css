@@ -16,19 +16,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, #FAF8F3 0%, #F5F1E8 25%, #E8DDD4 50%, #F4D5C2 75%, #E8D5B7 100%);
   min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+.dark body {
+  background: linear-gradient(135deg, #1a1a1a 0%, #242424 25%, #2d2d2d 50%, #242424 75%, #1a1a1a 100%);
 }
 
 /* Warm mesh gradient backgrounds */
 .bg-mesh-primary {
   background: linear-gradient(135deg, #FAF8F3 0%, #F5F1E8 50%, #E8DDD4 100%);
+  transition: background 0.3s ease;
+}
+
+.dark .bg-mesh-primary {
+  background: linear-gradient(135deg, #1a1a1a 0%, #242424 50%, #2d2d2d 100%);
 }
 
 .bg-mesh-secondary {
   background: linear-gradient(135deg, #F4D5C2 0%, #E8D5B7 50%, #E8C4A0 100%);
+  transition: background 0.3s ease;
+}
+
+.dark .bg-mesh-secondary {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 50%, #2d2d2d 100%);
 }
 
 .bg-mesh-accent {
   background: linear-gradient(135deg, #E8DDD4 0%, #F4D5C2 50%, #E8D5B7 100%);
+  transition: background 0.3s ease;
+}
+
+.dark .bg-mesh-accent {
+  background: linear-gradient(135deg, #242424 0%, #2d2d2d 50%, #3a3a3a 100%);
 }
 
 /* Card elevation */

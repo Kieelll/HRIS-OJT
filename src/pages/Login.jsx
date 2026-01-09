@@ -66,18 +66,18 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex bg-mesh-primary">
+    <div className="min-h-screen flex bg-mesh-primary dark:bg-dark-bg transition-colors">
       {/* Left Side - Branding & Information */}
-      <div className="hidden lg:flex lg:w-1/2 bg-mesh-secondary items-center justify-center p-12">
+      <div className="hidden lg:flex lg:w-1/2 bg-mesh-secondary dark:bg-dark-surface items-center justify-center p-12 transition-colors">
         <div className="max-w-lg">
           <div className="mb-8">
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-warm-peach to-warm-amber bg-clip-text text-transparent mb-3">
+            <h1 className="text-5xl font-bold bg-gradient-to-r from-warm-peach to-warm-amber dark:from-purple-400 dark:to-purple-600 bg-clip-text text-transparent mb-3">
               HRIS
             </h1>
-            <p className="text-2xl font-semibold text-gray-800 mb-2">
+            <p className="text-2xl font-semibold text-gray-800 dark:text-dark-text mb-2">
               Human Resource Information System
             </p>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
               Streamline your HR operations with a comprehensive platform designed for modern organizations.
             </p>
           </div>
@@ -88,44 +88,44 @@ const Login = () => {
                 👥
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Talent Management</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-dark-text mb-1">Talent Management</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Complete recruitment lifecycle from job posting to onboarding
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r from-warm-peach to-warm-amber flex items-center justify-center text-white text-xl font-bold">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r from-warm-peach to-warm-amber dark:from-purple-500 dark:to-purple-600 flex items-center justify-center text-white text-xl font-bold">
                 📊
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Analytics & Insights</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-dark-text mb-1">Analytics & Insights</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Real-time dashboards and reports for data-driven HR decisions
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r from-warm-peach to-warm-amber flex items-center justify-center text-white text-xl font-bold">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r from-warm-peach to-warm-amber dark:from-purple-500 dark:to-purple-600 flex items-center justify-center text-white text-xl font-bold">
                 ⚡
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Workflow Automation</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-dark-text mb-1">Workflow Automation</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Automated approvals, notifications, and streamlined processes
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r from-warm-peach to-warm-amber flex items-center justify-center text-white text-xl font-bold">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r from-warm-peach to-warm-amber dark:from-purple-500 dark:to-purple-600 flex items-center justify-center text-white text-xl font-bold">
                 🔒
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Secure & Compliant</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-dark-text mb-1">Secure & Compliant</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
                   Enterprise-grade security with role-based access control
                 </p>
               </div>
@@ -137,16 +137,16 @@ const Login = () => {
       {/* Right Side - Login Form */}
       <div className="flex-1 flex items-center justify-center p-4 lg:p-12">
         <div className="w-full max-w-md">
-          <div className="bg-white rounded-2xl shadow-2xl card-elevation-hover p-8">
+          <div className="bg-white dark:bg-dark-surface rounded-2xl shadow-2xl card-elevation-hover p-8 transition-colors">
             <div className="text-center mb-8 lg:hidden">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-warm-peach to-warm-amber bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-warm-peach to-warm-amber dark:from-purple-400 dark:to-purple-600 bg-clip-text text-transparent mb-2">
                 HRIS
               </h1>
-              <p className="text-gray-600">Human Resource Information System</p>
+              <p className="text-gray-600 dark:text-gray-400">Human Resource Information System</p>
             </div>
 
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">Welcome Back</h2>
-            <p className="text-gray-600 mb-6">Sign in to access your HRIS account</p>
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-dark-text mb-2">Welcome Back</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">Sign in to access your HRIS account</p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <Input
@@ -182,9 +182,9 @@ const Login = () => {
               <div className="flex items-center justify-between text-sm">
                 <label className="flex items-center">
                   <input type="checkbox" className="mr-2" />
-                  <span className="text-gray-600">Remember me</span>
+                  <span className="text-gray-600 dark:text-gray-400">Remember me</span>
                 </label>
-                <a href="#" className="text-warm-amber hover:text-warm-peach font-medium">
+                <a href="#" className="text-warm-amber dark:text-purple-400 hover:text-warm-peach dark:hover:text-purple-300 font-medium transition-colors">
                   Forgot password?
                 </a>
               </div>
@@ -195,10 +195,10 @@ const Login = () => {
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
                 Demo Mode: Use any email/password and select a role
               </p>
-              <a href="#" className="text-sm text-warm-amber hover:text-warm-peach font-medium mt-2 inline-block">
+              <a href="#" className="text-sm text-warm-amber dark:text-purple-400 hover:text-warm-peach dark:hover:text-purple-300 font-medium mt-2 inline-block transition-colors">
                 ← Back to Portal
               </a>
             </div>
